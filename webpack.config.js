@@ -29,7 +29,6 @@ module.exports = {
     extensions: ['.js']
   },
   plugins: [
-    // copy file from /client/assets
     new CopyWebpackPlugin([{
       from: 'client/assets'
     }]),

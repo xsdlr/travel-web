@@ -1,62 +1,89 @@
-.m-info{
-	background:#f7f7f7;padding:20px;font-size:14px;
-	.blk{
-		width:100%;border-radius:4px;background:#fff;height:40px;line-height:40px;margin-bottom:12px;
-		input{padding-left:40px;width:100%;height:100%;border:0;}
-		input[disabled]{background-color:#fff}
+$form-border-color = #efefef;
+
+.m-hd{
+	.logo{
+		img{float:left;width:60px;height:60px;margin-left:20px;margin-top:10px;}
 	}
-	.source{background-position:10px -279px;}
-	.destination{background-position:10px -183px;}
-	.time{background-position:10px -231px;}
+	.label{float:left;margin-left:20px;margin-top:15px;}
+	.ln{font-size:22px;margin-bottom:5px;}
+	.ln1{font-size:16px;}
+	.opt{
+		margin-right:15px;margin-top: 17px;
+		.item{float:left;margin-left:20px;padding-left:20px;cursor:pointer;}
+	}
+	.user{text-align: right;margin-right:15px;margin-top: 10px;}
 }
 
-.m-drive{
-	width:100%;
+.m-ft{
+	margin-top:12px;
+	.line{height:24px;line-height:24px;}
+}
+
+.m-banner{
+	background:#00f;
+	position: absolute;left:0;right:0;top:0;bottom:0;
+	.box{
+		position:relative;width:1000px;height:100%;margin:0 auto;overflow: hidden;
+	}
+	.col-1{
+		position: absolute;top:50%;left:0;width:600px;height:200px;margin-top:-100px;
+	}
+	.col-2{
+		position: absolute;top:50%;right:0;width:350px;height:360px;margin-top:-190px;
+	}
+	.wrd{font-size:46px;color:#fff;margin-top:25px;}
+	.wrd2{font-size:28px;color:#fff;margin-top:40px;}
+}
+
+.m-form{
+	background: #fff;height:360px;
+	.ttl{height:60px;line-height:60px;padding-left:40px;font-size:16px;letter-spacing:3px;font-weight: bold;border-bottom: 1px solid $form-border-color;}
+	.form{
+		padding:20px 30px;
+		.ipt{margin-bottom:20px;border:1px solid $form-border-color;}
+		.icn{float:left;border-right:1px solid $form-border-color;width:40px;height:40px;background: #f3f3f3;}
+		input{border:0;height:40px;line-height: 40px;padding-left:10px;}
+	}
+	.u-btn{margin-top:20px;}
+}
+
+.m-nav{
+	.links{float:right;margin-right:15px;color:#fff;}
 	.item{
-		position:relative;float:left;width:33.3%;border-right:1px solid #ddd;border-top:1px solid #ddd;border-bottom:1px solid #ddd;
-		.ttl{height:38px;line-height:38px;text-align:center;}
-		.img{width:60px;height:40px;margin:0 auto 10px;}
-	}
-	.item-1{
-		color:#fbb121;
-		&-active{border-top:1px solid #fbb121;border-bottom:1px solid transparent;}
-		.img{background-position:4px -63px;}
-		.u-trig{border-color: #fbb121 transparent transparent #fbb121;}
-	}
-	.item-2{
-		color:#08bd04;
-		&-active{border-top:1px solid #08bd04;border-bottom:1px solid transparent;}
-		.img{background-position:11px 0;}
-		.u-trig{border-color: #08bd04 transparent transparent #08bd04;}
-	}
-	.item-3{
-		color:#56c0ea;border-right:0;
-		&-active{border-top:1px solid #56c0ea;border-bottom:1px solid transparent;}
-		.img{background-position:7px -124px;}
-		.u-trig{border-color: #56c0ea transparent transparent #56c0ea;}
+		float:left;margin-left:38px;cursor:pointer;
+		&-active{font-size:18px;}
 	}
 }
 
-.m-trip{
-	padding:10px;font-size:14px;
-	.ln{
-		float:left;width:100%;line-height:32px;
-		&-1{width:50%;}
-		.wrd{padding-left:17px;}
+.m-choice{
+	.item{
+		height:40px;line-height:40px;border-left:2px solid #fff;text-align:center;cursor:pointer;
+		&-active{
+			background:#efefef;color:#38b25d;border-left:2px solid #38b25d;
+		}
 	}
-	/*.route{background-position:0 -355px;}*/
-	.duration{background-position:0 -423px;}
-	.distance{background-position:0 -326px;}
-	.busy{background-position:0 -456px;}
-	.description{background-position:0 -392px;}
-	.cost{background-position:0 -628px;}
 }
 
-.m-plan{
-	margin:10px;background-color:#f9f3e7;padding-left:40px;line-height:24px;font-size:14px;background-position:14px -510px;border:1px solid #f1ae1f;
-	b{color:#ff3300;}
+.m-mdl{
+	background: #fff;
 }
 
-.m-confirm{
-	margin-top:10px;
+.m-filter{
+	margin:20px;width:100%;padding:10px 20px;
+	.item{
+		margin-bottom: 20px;
+		.ttl{height:28px;line-height:28px;margin-bottom: 8px;}
+		.subs{
+			label{
+				margin-right:17px;
+				input{
+					margin-right:2px;
+				}
+			}
+		}
+	}
+}
+
+.m-graphic{
+	margin:20px;height:300px;text-align:center;
 }
