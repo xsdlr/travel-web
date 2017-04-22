@@ -12,6 +12,7 @@
     "mcss":"mcss -c client/mcss/mcss.json"
   },
   "dependencies": {
+    "regularjs":"^0.5.2",
     "raw-loader": "^0.5.1",
     "isomorphic-fetch": "^2.2.1",
     "babel-core": "^6.21.0",

@@ -5,15 +5,18 @@
 	position:absolute;top:80px;bottom:80px;left:0;right:0;
 }
 .g-ft{
-	position:absolute;bottom:0;left:0;right:0;background:#fff;height:80px;text-align: center;
+	position:absolute;bottom:0;left:0;right:0;background:#fff;height:80px;text-align:center;transition:width .3s ease-in-out;overflow: hidden;transition:left .3s ease-in-out;
 	&-1{left:185px;background: #f4f4f4;}
+	&.z-close{left:50px;}
 }
 .g-nav{
 	position:absolute;top:0;left:0;right:0;background:#38b25d;height:50px;line-height:50px;
 }
 .g-sd{
-	position:absolute;top:50px;bottom:0;left:0;width:185px;
+	position:absolute;top:50px;bottom:0;left:0;width:185px;transition:width .3s ease-in-out;
+	&.z-close{width:50px;}
 }
 .g-mnc{
-	position:absolute;left:185px;right:0;top:50px;bottom:0;height:100%;background: #f4f4f4;overflow: auto;
+	position:absolute;left:185px;right:0;top:50px;bottom:0;height:100%;background: #f4f4f4;overflow: auto;transition:left .3s ease-in-out;
+	&.z-close{left:50px;}
 }

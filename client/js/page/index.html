@@ -1,0 +1,90 @@
+<div class="g-hd">
+    <div class="m-hd">
+        <div class="f-fl logo">
+            <img src="./img/logo.png"/>
+            <div class="label">
+                <p class="ln">惠民城市</p>
+                <p class="ln1">城市计算的践行者（杭州市民卡）</p>
+            </div>
+        </div>
+        <div class="f-fr">
+            <div class="opt f-cb">
+                <div class="f-bg item">消息</div>
+                <div class="f-bg item">操作</div>
+                <div class="f-bg item" on-click={this.onFullScreen($event)}>全屏</div>
+            </div>
+            <div class="user">
+                当前用户：11111111111
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="g-mn" ref="container">
+    <div class="g-nav">
+        <div class="m-nav">
+            <div class="links">
+                <div class="item">首页</div>
+                <div class="item item-active">公共交通</div>
+                <div class="item">卡分析</div>
+                <div class="item">区域计算</div>
+                <div class="item">报表</div>
+                <div class="item">人群计算</div>
+                <div class="item">工具</div>
+            </div>
+        </div>
+    </div>
+    <div class="g-sd" r-class={{'z-close':close}}>
+        <div class="m-slider" on-click={close = !close}>
+            <img src="./img/slider.png">
+        </div>
+        <div class="m-choice">
+            <div class="item">地铁流量</div>
+            <div class="item item-active">公交流量</div>
+            <div class="item">OD</div>
+            <div class="item">地铁</div>
+            <div class="item">关键区域</div>
+        </div>
+    </div>
+    <div class="g-mnc" r-class={{'z-close':close}}>
+        <div class="m-mdl m-filter">
+            <div class="item">
+                <div class="ttl">日期</div>
+                <div class="subs">
+                    <label><input type="radio" name="date">周末</label>
+                    <label><input type="radio" name="date">工作日</label>
+                    <label><input type="radio" name="date">国庆</label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ttl">时间</div>
+                <div class="subs">
+                    <label><input type="radio" name="time">6:00~10:00</label>
+                    <label><input type="radio" name="time">11:00~13:00</label>
+                    <label><input type="radio" name="time">17:00~19:00</label>
+                    <label><input type="radio" name="time">20:00~24:00</label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ttl">关注点</div>
+                <div class="subs">
+                    <label><input type="radio" name="follow">近江</label>
+                    <label><input type="radio" name="follow">东站</label>
+                    <label><input type="radio" name="follow">武林</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-mdl m-graphic">
+            图表区域
+        </div>
+
+    </div>
+</div>
+
+<div class="g-ft g-ft-1" r-class={{'z-close':close}}>
+    <div class="m-ft">
+        <div class="line">版权所有：2003-2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州市民卡有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务热线：96225</div>
+        <div class="line">增值电信业务经营许可证：浙B2-20110464</div>
+    </div>
+</div>

@@ -1,4 +1,3 @@
-let extend = require('regularjs').util.extend;
 
 function obj2query(data){
 	let query = '';
@@ -44,11 +43,31 @@ function format(value,format){
 	return format.replace( trunk, (cap) => fmap[cap]? fmap[cap](value): '');
 }
 
-
+function toggleFullScreen(element,type){
+  if(type == 'enter'){
+    if (!document.mozFullScreen && !document.webkitFullScreen) {
+      if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if(element.webkitRequestFullScreen){
+        element.webkitRequestFullScreen();
+      }else if(element.msRequestFullscreen){
+        element.msRequestFullscreen();  
+      }
+    }
+  }else{
+    if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if(document.webkitCancelFullScreen){
+      document.webkitCancelFullScreen();
+    }else if(document.msExitFullscreen){
+      document.msExitFullscreen();
+    }
+  }
+}
 
 
 module.exports = {
 	obj2query,
-	extend,
-    format
+    format,
+    toggleFullScreen
 }
