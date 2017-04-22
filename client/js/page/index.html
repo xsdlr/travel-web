@@ -39,11 +39,16 @@
             <img src="./img/slider.png">
         </div>
         <div class="m-choice">
-            <div class="item">地铁流量</div>
-            <div class="item item-active">公交流量</div>
-            <div class="item">OD</div>
-            <div class="item">地铁</div>
-            <div class="item">关键区域</div>
+            {#list choiceArr as choice}
+            <div class="group {choice.open ? 'z-open':''}">
+                <h4 on-click={choice.open = !choice.open}>{choice.name}</h4>
+                <div class="items">
+                    {#list choice.items as item}
+                    <div class="item {item.active?'item-active':''}" on-click={this.changeActive(item)}>{item.title}</div>
+                    {/list}
+                </div>
+            </div>
+            {/list}
         </div>
     </div>
     <div class="g-mnc" r-class={{'z-close':close}}>

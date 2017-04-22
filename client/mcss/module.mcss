@@ -56,8 +56,13 @@ $form-border-color = #efefef;
 }
 
 .m-choice{
+	.group{
+		h4{height:40px;line-height:40px;padding-left:50px;cursor:pointer;white-space: nowrap;}
+		.items{display: none;}
+		&.z-open .items{display: block;}
+	}
 	.item{
-		height:40px;line-height:40px;border-left:2px solid #fff;padding-left:50px;cursor:pointer;white-space: nowrap;
+		height:40px;line-height:40px;border-left:2px solid #fff;padding-left:60px;cursor:pointer;white-space: nowrap;
 		&-active{
 			background:#efefef;color:#38b25d;border-left:2px solid #38b25d;
 		}

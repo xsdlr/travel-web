@@ -3,6 +3,7 @@
 }
 .g-mn{
 	position:absolute;top:80px;bottom:80px;left:0;right:0;
+	&.z-full{top:0;}
 }
 .g-ft{
 	position:absolute;bottom:0;left:0;right:0;background:#fff;height:80px;text-align:center;transition:width .3s ease-in-out;overflow: hidden;transition:left .3s ease-in-out;
