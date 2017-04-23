@@ -9,9 +9,9 @@
         </div>
         <div class="f-fr">
             <div class="opt f-cb">
-                <div class="f-bg item">消息</div>
-                <div class="f-bg item">操作</div>
-                <div class="f-bg item" on-click={this.onFullScreen($event)}>全屏</div>
+                <div class="f-bg item message">消息</div>
+                <div class="f-bg item opera">操作</div>
+                <div class="f-bg item fullscreen" on-click={this.onFullScreen('enter')}>全屏</div>
             </div>
             <div class="user">
                 当前用户：11111111111
@@ -31,6 +31,7 @@
                 <div class="item">报表</div>
                 <div class="item">人群计算</div>
                 <div class="item">工具</div>
+                <div class="item" r-hide={mode!='full'} on-click={this.onFullScreen('leave')}>退出全屏</div>
             </div>
         </div>
     </div>
@@ -41,7 +42,7 @@
         <div class="m-choice">
             {#list choiceArr as choice}
             <div class="group {choice.open ? 'z-open':''}">
-                <h4 on-click={choice.open = !choice.open}>{choice.name}</h4>
+                <h4 on-click={choice.open = !choice.open} class="f-bg {choice.className}">{choice.name}</h4>
                 <div class="items">
                     {#list choice.items as item}
                     <div class="item {item.active?'item-active':''}" on-click={this.changeActive(item)}>{item.title}</div>
@@ -87,7 +88,7 @@
     </div>
 </div>
 
-<div class="g-ft g-ft-1" r-class={{'z-close':close}}>
+<div class="g-ft g-ft-1">
     <div class="m-ft">
         <div class="line">版权所有：2003-2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州市民卡有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务热线：96225</div>
         <div class="line">增值电信业务经营许可证：浙B2-20110464</div>

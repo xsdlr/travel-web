@@ -34,8 +34,8 @@ const app = Regular.extend({
         }; 
     },
 
-    onFullScreen(){
-    	_.toggleFullScreen(document.body,'enter');
+    onFullScreen(type){
+    	_.toggleFullScreen(document.body,type);
     },
 
     changeActive(item){
@@ -69,6 +69,7 @@ const app = Regular.extend({
             })
             dom.delClass(document.querySelector(mainElement),'z-full');
         }
+        this.$update();
     }
 
 })

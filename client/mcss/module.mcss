@@ -10,6 +10,9 @@ $form-border-color = #efefef;
 	.opt{
 		margin-right:15px;margin-top: 17px;
 		.item{float:left;margin-left:20px;padding-left:20px;cursor:pointer;}
+		.message{background-position:0 5px;}
+		.opera{background-position:0 -71px;}
+		.fullscreen{background-position:0 -131px;}
 	}
 	.user{text-align: right;margin-right:15px;margin-top: 10px;}
 }
@@ -41,10 +44,12 @@ $form-border-color = #efefef;
 	.form{
 		padding:20px 30px;
 		.ipt{margin-bottom:20px;border:1px solid $form-border-color;}
-		.icn{float:left;border-right:1px solid $form-border-color;width:40px;height:40px;background: #f3f3f3;}
+		.icn{float:left;border-right:1px solid $form-border-color;width:40px;height:40px;background-color: #f3f3f3;}
 		input{border:0;height:40px;line-height: 40px;padding-left:10px;}
 	}
 	.u-btn{margin-top:20px;}
+	.username{background-position:10px -184px;}
+	.password{background-position:11px -243px;}
 }
 
 .m-nav{
@@ -60,6 +65,9 @@ $form-border-color = #efefef;
 		h4{height:40px;line-height:40px;padding-left:50px;cursor:pointer;white-space: nowrap;}
 		.items{display: none;}
 		&.z-open .items{display: block;}
+		.metro{background-position:11px -379px;}
+		.bus{background-position:11px -308px;}
+		.od{background-position:11px -437px;}
 	}
 	.item{
 		height:40px;line-height:40px;border-left:2px solid #fff;padding-left:60px;cursor:pointer;white-space: nowrap;
@@ -95,5 +103,5 @@ $form-border-color = #efefef;
 
 .m-slider{
 	margin:10px;cursor:pointer;
-	img{width:30px;height:30px;}
+	img{width:30px;height:20px;}
 }

@@ -7,8 +7,7 @@
 }
 .g-ft{
 	position:absolute;bottom:0;left:0;right:0;background:#fff;height:80px;text-align:center;transition:width .3s ease-in-out;overflow: hidden;transition:left .3s ease-in-out;
-	&-1{left:185px;background: #f4f4f4;}
-	&.z-close{left:50px;}
+	&-1{background: #f4f4f4;}
 }
 .g-nav{
 	position:absolute;top:0;left:0;right:0;background:#38b25d;height:50px;line-height:50px;
