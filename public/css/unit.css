@@ -9,3 +9,30 @@
 	cursor:pointer;
 	color:#fff;
 }
+.u-btn-1{
+	width:100px;
+	margin:10px 20px;
+	background:#38b25d;
+	border-radius:8px;
+}
+.u-menu{
+	display:none;
+	position:absolute;
+	left:0;
+	top:100%;
+	box-sizing:border-box;
+	border:1px solid #ccc;
+	background:#fff;
+	overflow-y:auto;
+	cursor:default;
+	z-index:100;
+}
+.u-menu.z-sel{
+	display:block;
+}
+.u-menu li{
+	padding:4px 10px;
+	line-height:28px;
+	white-space:nowrap;
+	cursor:pointer;
+}

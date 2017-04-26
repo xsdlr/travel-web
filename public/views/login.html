@@ -7,17 +7,17 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/unit.css">
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/module.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/unit.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/module.css">
 </head>
 
 <body>
     <div class="g-hd">
         <div class="m-hd">
             <div class="f-fl logo">
-                <img src="./img/logo.png"/>
+                <img src="../img/logo.png"/>
                 <div class="label">
                     <p class="ln">惠民城市</p>
                     <p class="ln1">城市计算的践行者（杭州市民卡）</p>
@@ -26,8 +26,13 @@
             <div class="f-fr">
                 <div class="opt f-cb">
                     <div class="f-bg item message">消息</div>
-                    <div class="f-bg item opera">操作</div>
+                    <div class="f-bg item opera" id="opera-btn">操作</div>
                     <div class="f-bg item fullscreen">全屏</div>
+                    <ul class="u-menu u-menu-opera" id="opera-menu">
+                        <li><div class="f-bg item opera">操作</div></li>
+                        <li>更改密码</li>
+                        <li>退出</li>
+                    </ul>
                 </div>
                 <div class="user">
                     当前用户：11111111111
@@ -69,6 +74,9 @@
             <div class="line">增值电信业务经营许可证：浙B2-20110464</div>
         </div>
     </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/base.js"></script>
 
 </body>
 

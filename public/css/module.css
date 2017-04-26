@@ -17,6 +17,7 @@
 	font-size:16px;
 }
 .m-hd .opt{
+	position:relative;
 	margin-right:15px;
 	margin-top:17px;
 }
@@ -35,10 +36,23 @@
 .m-hd .opt .fullscreen{
 	background-position:0 -131px;
 }
+.m-hd .opt .u-menu-opera .item{
+	float:none;
+	margin:0;
+}
 .m-hd .user{
 	text-align:right;
 	margin-right:15px;
 	margin-top:10px;
+}
+.m-hd .u-menu-opera{
+	position:absolute;
+	top:-6px;
+	left:82px;
+	background:#a4a4a4;
+	border:0;
+	width:80px;
+	color:#fff;
 }
 .m-ft{
 	margin-top:12px;
@@ -213,4 +227,57 @@
 .m-slider img{
 	width:30px;
 	height:20px;
+}
+.m-list{
+	background:#f4f4f4;
+	padding:0 25px;
+	padding-bottom:50px;
+}
+.m-list .item{
+	margin:25px 0;
+}
+.m-list .item .img{
+	position:relative;
+	width:310px;
+	height:160px;
+}
+.m-list .item .img img{
+	width:100%;
+	height:100%;
+}
+.m-list .item .img .mask{
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:60px;
+	line-height:60px;
+	font-size:32px;
+	color:#fff;
+	background:#3b3c41;
+	text-align:center;
+	opacity:0.5;
+}
+.m-list .item .wrap{
+	width:100%;
+}
+.m-list .item .box{
+	height:160px;
+	background:#fff;
+	margin-left:335px;
+	padding:12px 25px;
+}
+.m-list .item .box .ttl{
+	font-size:22px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.m-list .item .box .des{
+	line-height:24px;
+}
+.m-list .item .box .link{
+	display:block;
+	float:right;
+	color:#38b25d;
+	cursor:pointer;
 }
