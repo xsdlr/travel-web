@@ -6,6 +6,3 @@ webpack --display-error-details
 
 #运行
 npm start
-
-#样式编译
-npm run mcss
