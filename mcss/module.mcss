@@ -38,6 +38,7 @@ $form-border-color = #efefef;
 	}
 	.wrd{font-size:46px;color:#fff;margin-top:25px;}
 	.wrd2{font-size:28px;color:#fff;margin-top:40px;}
+	&-1{top:50px;}
 }
 
 .m-form{
