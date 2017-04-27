@@ -1,7 +1,10 @@
 .u-btn{
 	text-align:center;width:290px;height:40px;line-height:40px;letter-spacing:2px;background:#24535d;margin:0 auto;cursor:pointer;color:#fff;
 	&-1{
-		width:100px;margin:10px 20px;background: #38b25d;border-radius: 8px;
+		width:100px;background: #38b25d;border-radius: 8px;
+	}
+	&-2{
+		width:100px;background: #fcab4f;border-radius: 8px;
 	}
 }
 

@@ -201,7 +201,6 @@
 }
 .m-filter{
 	margin:20px;
-	width:100%;
 	padding:10px 20px;
 }
 .m-filter .item{
@@ -362,4 +361,15 @@
 .m-links .wash{
 	left:110px;
 	top:240px;
+}
+.m-btns{
+	margin:10px 20px;
+	text-align:right;
+}
+.m-btns .u-btn{
+	margin-right:10px;
+	display:inline-block;
+}
+.m-btns .u-btn:last-child{
+	margin-right:0;
 }

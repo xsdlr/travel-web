@@ -85,7 +85,7 @@ $form-border-color = #efefef;
 }
 
 .m-filter{
-	margin:20px;width:100%;padding:10px 20px;
+	margin:20px;padding:10px 20px;
 	.item{
 		margin-bottom: 20px;
 		.ttl{height:28px;line-height:28px;margin-bottom: 8px;}
@@ -156,5 +156,12 @@ $form-border-color = #efefef;
 	.wash{
 		left:110px;top:240px;
 	}
+}
 
+.m-btns{
+	margin:10px 20px;text-align: right;
+	.u-btn{
+		margin-right:10px;display: inline-block;
+		&:last-child{margin-right:0;}
+	}
 }

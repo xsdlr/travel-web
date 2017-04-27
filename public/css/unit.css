@@ -11,8 +11,12 @@
 }
 .u-btn-1{
 	width:100px;
-	margin:10px 20px;
 	background:#38b25d;
+	border-radius:8px;
+}
+.u-btn-2{
+	width:100px;
+	background:#fcab4f;
 	border-radius:8px;
 }
 .u-menu{
