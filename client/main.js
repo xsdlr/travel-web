@@ -13,10 +13,12 @@ const router = new VueRouter({
         },
         {
             path: '/login',
+            name:'login',
             component: require('./routers/login.vue')
         },
         {
             path: '/traffic',
+            name:'traffic',
             component: require('./routers/traffic.vue')
         }
     ]

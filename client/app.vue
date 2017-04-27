@@ -18,7 +18,7 @@
                     <div class="opt f-cb">
                         <div class="f-bg item message">消息</div>
                         <div class="f-bg item opera">操作</div>
-                        <div class="f-bg item fullscreen">全屏</div>
+                        <div class="f-bg item fullscreen" v-on:click="onFullScreen('enter')">全屏</div>
                     </div>
                     <div class="user">
                         当前用户：11111111111
@@ -39,4 +39,25 @@
     </div>
 </template>
 
+<script>
+    import _ from './utils';
 
+    export default {
+        data(){
+            return {
+
+            }   
+        },
+        created(){
+            
+        },
+        mounted() {
+
+        },
+        methods: {
+            onFullScreen(type){
+                _.toggleFullScreen(document.body,type);
+            }
+        },
+    }
+</script>

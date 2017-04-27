@@ -66,7 +66,7 @@ function toggleFullScreen(element,type){
 }
 
 
-module.exports = {
+export default {
 	obj2query,
     format,
     toggleFullScreen

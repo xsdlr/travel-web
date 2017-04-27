@@ -10,19 +10,24 @@
                     <div class="item">报表</div>
                     <div class="item">人群计算</div>
                     <div class="item">工具</div>
-                    <div class="item">退出全屏</div>
+                    <div class="item" v-on:click="onFullScreen('leave')">退出全屏</div>
                 </div>
             </div>
         </div>
-        <div class="g-sd">
+        <div class="g-sd" :class="{'z-close':close}">
             <div class="m-slider">
-                <img src="../assets/img/slider.png">
+                <img src="../assets/img/slider.png" @click="close = !close">
             </div>
             <div class="m-choice">
-                
+                <div class="group" :class="{'z-open':choice.open}" v-for="choice in choiceArr">
+                    <h4 class="f-bg" :class="choice.className" @click="choice.open = !choice.open">{{choice.name}}</h4>
+                    <div class="items">
+                        <div class="item" v-for="item in choice.items" :class="{'item-active':item.active}" @click="changeActive(item)">{{item.title}}</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="g-mnc">
+        <div class="g-mnc" :class="{'z-close':close}">
             <div class="m-mdl m-filter">
                 <div class="item">
                     <div class="ttl">日期</div>
@@ -58,3 +63,37 @@
         </div>
     </div>
 </template>
+
+<script>
+    import _ from '../utils';
+    import consts from '../utils/consts';
+
+    export default {
+        data(){
+            return {
+                choiceArr:consts.choiceArr,
+                close:false
+            }   
+        },
+        created(){
+            
+        },
+        mounted(){
+
+        },
+        methods: {
+            onFullScreen(type){
+                _.toggleFullScreen(document.body,type);
+            },
+            changeActive(item){
+                let data = this.$data;
+                data.choiceArr.forEach(choice => {
+                    choice.items.forEach(item => {
+                        item.active = false;
+                    })
+                })
+                item.active = true;
+            }
+        },
+    }
+</script>
