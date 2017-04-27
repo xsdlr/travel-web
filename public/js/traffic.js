@@ -31,9 +31,9 @@ function onFullScreen(type){
 }
 
 fullScreenArr.forEach(type => {
-	document.body.addEventListener(type,function(e){
-		changeMode();
-	})
+  $(document).on(type,function(e){
+    changeMode();
+  })
 })
 
 function changeMode(){
