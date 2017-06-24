@@ -9,7 +9,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: '/login'
+            redirect: '/large1'
         },
         {
             path: '/login',
@@ -20,6 +20,11 @@ const router = new VueRouter({
             path: '/traffic',
             name:'traffic',
             component: require('./routers/traffic.vue')
+        },
+        {
+            path: '/large1',
+            name:'large1',
+            component: require('./routers/large1.vue')
         }
     ]
 });

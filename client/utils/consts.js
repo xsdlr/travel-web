@@ -1,5 +1,5 @@
 export default {
-	choiceArr : [{
+	choiceArr:[{
 	    name:'地铁流量',
 	    className:'metro',
 	    open:true,
@@ -14,5 +14,51 @@ export default {
 	    className:'od',
 	    open:false,
 	    items:[{title:'地铁',active:false},{title:'关键区域',active:false}]
-	}]
+	}],
+
+	WHITE_THEME:['login','traffic'],
+	BLACK_THEME:['large1','large2','large3','large4','large5'],
+
+	GRIDSIZE:1,
+
+	LARGE1_CONFIG:[
+		{
+			box:{region:{top:20,left:20,width:680,height:680}},
+			type:'area',
+			id:2,
+			name:'区域分布'
+		},
+		{
+			box:{
+				region:{top:40,left:430,width:250,height:50},
+				inner:true
+			},
+			type:'text',
+			id:1,
+		},
+		{
+			box:{region:{top:20,left:720,width:620,height:310}},
+			type:'line',
+			id:3,
+			name:'就诊时段'
+		},
+		{
+			box:{region:{top:20,left:1360,width:220,height:310}},
+			type:'pie',
+			id:4,
+			name:'出行方式选择'
+		},
+		{
+			box:{region:{top:350,left:720,width:460,height:350}},
+			type:'table',
+			id:5,
+			name:'出行就诊医院排名'
+		},
+		{
+			box:{region:{top:350,left:1200,width:380,height:350}},
+			type:'pie',
+			id:6,
+			name:'年龄对比'
+		}
+	],
 }

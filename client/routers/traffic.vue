@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="m-mdl m-graphic">
+            <div class="m-mdl" style="margin:20px;height:300px;text-align:center;">
                 图表区域
             </div>
 

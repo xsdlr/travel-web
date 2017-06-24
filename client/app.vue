@@ -3,7 +3,7 @@
 </style>
 
 <template>
-    <div class="g-app" id="app">
+    <div class="g-app" :class="{'g-app-large':theme=='black'}" id="app">
 
         <div class="g-hd">
             <div class="m-hd">
@@ -14,7 +14,7 @@
                         <p class="ln1">城市计算的践行者（杭州市民卡）</p>
                     </div>
                 </div>
-                <div class="f-fr">
+                <div class="f-fr" :class="{'f-dn':theme=='black'}">
                     <div class="opt f-cb">
                         <div class="f-bg item message">消息</div>
                         <div class="f-bg item opera">操作</div>
@@ -41,15 +41,19 @@
 
 <script>
     import _ from './utils';
+    import consts from './utils/consts';
 
     export default {
         data(){
             return {
-
+                theme:'white'
             }   
         },
         created(){
-            
+            let route = this.$route;
+            if(consts.BLACK_THEME.indexOf(route.name) > -1){
+                this.theme = 'black';
+            }
         },
         mounted() {
 
