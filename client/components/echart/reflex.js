@@ -128,6 +128,105 @@ export default {
 				    ]
 				};
 			break;
+			case 12:
+				option = {
+				    tooltip: {
+				        trigger: 'axis'
+				    },
+				    legend: {
+				        data:[{
+				        	name:'总数量',
+				        	textStyle:{
+						        color:'#c23531'
+						    }
+				        },{
+				        	name:'WEB端',
+				        	textStyle:{
+						        color:'#5f9cb9'
+						    }
+				        },
+				        {
+				        	name:'移动端',
+				        	textStyle:{
+						        color:'#4be6fc'
+						    }
+				        }],
+				        x: 'right'
+				    },
+				    xAxis:  {
+				        type: 'category',
+				        data: queryResult.time,
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+				    },
+				    grid: {
+				        left: '3%',
+				        right: '8%',
+				        bottom: '3%',
+				        containLabel: true
+				    },
+				    yAxis: {
+				        name:'使用量',
+				        type: 'value',
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+			            splitLine:{  
+                            show:false  
+                        }
+				    },
+				    series: [
+				        {
+				            name:'总数量',
+				            type:'line',
+				            data:queryResult.count
+				        },
+				        {
+				            name:'WEB端',
+				            type:'bar',
+				            data:queryResult.web,
+				            itemStyle : {  
+                                normal : {  
+                                    lineStyle:{  
+                                        color:'#5f9cb9'
+                                    }  
+                                }  
+                            },
+                            barGap:0
+				        },
+				        {
+				            name:'移动端',
+				            type:'bar',
+				            data:queryResult.mobile,
+				            itemStyle : {  
+                                normal : {  
+                                    lineStyle:{  
+                                        color:'#4be6fc'
+                                    }  
+                                }  
+                            },
+                            barGap:0
+				        }
+				    ]
+				};
+			break;
 		}
 
         return option;

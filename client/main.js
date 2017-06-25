@@ -25,6 +25,26 @@ const router = new VueRouter({
             path: '/large1',
             name:'large1',
             component: require('./routers/large1.vue')
+        },
+        {
+            path: '/large2',
+            name:'large2',
+            component: require('./routers/large2.vue')
+        },
+        {
+            path: '/large3',
+            name:'large3',
+            component: require('./routers/large3.vue')
+        },
+        {
+            path: '/large4',
+            name:'large4',
+            component: require('./routers/large4.vue')
+        },
+        {
+            path: '/large5',
+            name:'large5',
+            component: require('./routers/large5.vue')
         }
     ]
 });

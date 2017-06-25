@@ -16,8 +16,8 @@
 }
 
 .m-graphic{
-    position: absolute;top: 0;left: 0;bottom: 0;right: 0;
-    h2{text-align:left;padding-left:20px;height:38px;line-height: 38px;color:#7e92b5;}
+    position: absolute;top: 0;left: 0;bottom: 0;right: 0;color:#5f9cb9;overflow: hidden;
+    h2{text-align:left;padding-left:35px;height:38px;line-height: 38px;color:#7e92b5;background-position: 14px -761px;}
 }
 
 .m-frame{
@@ -26,4 +26,46 @@
 
 .m-echarts{
 	width:100%;height:100%;
+}
+
+.m-graphic-text{
+	font-size:14px;text-align: left;padding:5px;
+}
+
+.m-graphic-area{
+	.img{
+		width:100%;height:480px;text-align: center;margin-top:12px;
+		img{width:600px;height:480px;}
+	}
+	.flex{
+		.item{
+			float:left;width:180px;margin-left:40px;text-align: left;margin-top:20px;
+			.person{float:left;padding:10px 20px;}
+			.man{background-position: 1px -548px;}
+			.woman{background-position: 1px -652px;}
+		}
+	}
+}
+
+.m-graphic-table{
+	position: absolute;top: 38px;left: 0;bottom: 0;right: 0;padding:0 15px;overflow: auto;
+}
+
+.m-graphic-list{
+	padding:0 40px;
+	.line{
+		margin-top:8px;
+		.txt{float:left;color:#ecf2ff;width:75px;text-align: left;}
+		.u-btn{float:left;margin-right:30px;}
+	}
+}
+
+.m-graphic-indicator{
+	padding:30px 0;
+	.indicator-box{
+		float:left;border-right:1px solid #243b4b;
+		&:last-child{border-right:0;}
+		h1{font-size:40px;}
+		.name{color:#ecf2ff;margin-top:3px;font-weight:bold;}
+	}
 }

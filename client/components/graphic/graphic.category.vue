@@ -1,5 +1,5 @@
 <template>
-    <div class="m-graphic-relation">
+    <div class="m-graphic-category">
         
     </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 
     export default {
-        name:'graphic-relation',
+        name:'graphic-category',
         data(){
             return {}
         },

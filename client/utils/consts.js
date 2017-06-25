@@ -16,8 +16,11 @@ export default {
 	    items:[{title:'地铁',active:false},{title:'关键区域',active:false}]
 	}],
 
+
 	WHITE_THEME:['login','traffic'],
 	BLACK_THEME:['large1','large2','large3','large4','large5'],
+
+	INDICATOR_COLORS:['#ff4240','#42bf41','#2df3ff','#f6958f'],
 
 	GRIDSIZE:1,
 
@@ -60,5 +63,132 @@ export default {
 			id:6,
 			name:'年龄对比'
 		}
+	],
+
+	LARGE2_CONFIG:[
+		{
+			box:{region:{top:20,left:20,width:1070,height:680}},
+			type:'relation',
+			id:7
+		},
+		{
+			box:{
+				region:{top:40,left:560,width:510,height:210},
+				inner:true
+			},
+			type:'list',
+			id:8,
+			name:'各年龄段使用最多功能'
+		},
+		{
+			box:{
+				region:{top:280,left:560,width:510,height:180},
+				inner:true
+			},
+			type:'indicator',
+			id:9,
+			name:'WEB端使用最多功能量'
+		},
+		{
+			box:{
+				region:{top:490,left:560,width:510,height:180},
+				inner:true
+			},
+			type:'indicator',
+			id:10,
+			name:'移动端使用最多功能量'
+		},
+		{
+			box:{region:{top:20,left:1110,width:450,height:370}},
+			type:'table',
+			id:11,
+			name:'终端使用统计'
+		},
+		{
+			box:{region:{top:410,left:1110,width:450,height:290}},
+			type:'line',
+			id:12,
+			name:'各时间段功能使用量统计'
+		}
+	],
+
+	LARGE3_CONFIG:[
+		{
+			box:{region:{top:20,left:20,width:1070,height:680}},
+			type:'category',
+			id:13,
+			needQuery:false
+		},
+		{
+			box:{
+				region:{top:40,left:560,width:150,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:14,
+			name:'功能总使用量'
+		},
+		{
+			box:{
+				region:{top:40,left:730,width:340,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:15,
+			name:'排名前三使用功能'
+		},
+		{
+			box:{
+				region:{top:260,left:560,width:510,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:16,
+			name:'流量人数'
+		},
+		{
+			box:{
+				region:{top:480,left:560,width:510,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:17,
+			name:'三方应用'
+		},
+		{
+			box:{region:{top:20,left:1110,width:450,height:680}},
+			type:'empty',
+			id:18,
+			name:'钱包查询流量分析',
+			needQuery:false
+		},
+		{
+			box:{
+				region:{top:60,left:1125,width:425,height:150},
+				inner:true
+			},
+			type:'indicator',
+			id:19,
+			name:'用户统计'
+		},
+		{
+			box:{
+				region:{top:220,left:1125,width:425,height:300},
+				inner:true
+			},
+			type:'line',
+			id:20,
+			name:'使用统计'
+		},
+		{
+			box:{
+				region:{top:530,left:1125,width:425,height:150},
+				inner:true
+			},
+			type:'table',
+			id:21,
+			name:'留存用户'
+		},
+		
 	],
 }

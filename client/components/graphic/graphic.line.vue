@@ -10,7 +10,7 @@
     import chart from '../echart/chart';
 
     export default {
-        name:'graphic-pie',
+        name:'graphic-line',
         data(){
             return {}
         },

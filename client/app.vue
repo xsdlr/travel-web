@@ -14,6 +14,15 @@
                         <p class="ln1">城市计算的践行者（杭州市民卡）</p>
                     </div>
                 </div>
+                <div class="title">
+                    <img src="./assets/img/hd_left.png">
+                    <img v-if="$route.name === 'large1'" src="./assets/img/large1.png"/>
+                    <img v-if="$route.name === 'large2'" src="./assets/img/large2.png"/>
+                    <img v-if="$route.name === 'large3'" src="./assets/img/large3.png"/>
+                    <img v-if="$route.name === 'large4'" src="./assets/img/large4.png"/>
+                    <img v-if="$route.name === 'large5'" src="./assets/img/large5.png"/>
+                    <img src="./assets/img/hd_right.png">
+                </div>
                 <div class="f-fr" :class="{'f-dn':theme=='black'}">
                     <div class="opt f-cb">
                         <div class="f-bg item message">消息</div>
@@ -50,8 +59,8 @@
             }   
         },
         created(){
-            let route = this.$route;
-            if(consts.BLACK_THEME.indexOf(route.name) > -1){
+            let $route = this.$route;
+            if(consts.BLACK_THEME.indexOf($route.name) > -1){
                 this.theme = 'black';
             }
         },

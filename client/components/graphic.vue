@@ -7,7 +7,7 @@
             <div class='resize-bottomLeft'></div>
         </div>
         <div class="m-graphic">
-            <h2 :class="{'f-dn':!component.name}">{{component.name}}</h2>
+            <h2 class="f-bg" :class="{'f-dn':!component.name}">{{component.name}}</h2>
             <graphic-area v-if="queryResult && component.type === 'area'" :queryResult="queryResult" :component="component"/>
             <graphic-text v-if="queryResult && component.type === 'text'" :queryResult="queryResult" :component="component"/>
             <graphic-table v-if="queryResult && component.type === 'table'" :queryResult="queryResult" :component="component"/>
@@ -19,6 +19,7 @@
             <graphic-meter v-if="queryResult && component.type === 'meter'" :queryResult="queryResult" :component="component"/>
             <graphic-heat v-if="queryResult && component.type === 'heat'" :queryResult="queryResult" :component="component"/>
             <graphic-relation v-if="queryResult && component.type === 'relation'" :queryResult="queryResult" :component="component"/>
+            <graphic-category v-if="queryResult && component.type === 'category'" :queryResult="queryResult" :component="component"/>
         </div>
     </div>
 </template>
@@ -38,6 +39,7 @@
     import graphicMeter from './graphic/graphic.meter';
     import graphicHeat from './graphic/graphic.heat';
     import graphicRelation from './graphic/graphic.relation';
+    import graphicCategory from './graphic/graphic.category';
     
     export default {
         data(){
@@ -76,7 +78,7 @@
                 })
             }
         },
-        components:{graphicArea,graphicText,graphicTable,graphicLine,graphicPie,graphicMap,graphicIndicator,graphicList,graphicMeter,graphicHeat,graphicRelation}
+        components:{graphicArea,graphicText,graphicTable,graphicLine,graphicPie,graphicMap,graphicIndicator,graphicList,graphicMeter,graphicHeat,graphicRelation,graphicCategory}
     }
 
 </script>

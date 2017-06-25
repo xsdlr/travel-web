@@ -1,14 +1,14 @@
 <template>
     <div class="m-graphic-area">
         <div class="img">
-            <img src="">
+            <img src="../../assets/img/area.png">
         </div>
         <div class="flex">
             <div class="item" v-for="item of queryResult.list">
                 <p class="">{{item.name}}</p>
                 <div class="line">
-                    <div class="person man">{{item.manNum}}</div>
-                    <div class="person woman">{{item.womanNum}}</div>
+                    <div class="f-bg person man">{{item.manNum}}</div>
+                    <div class="f-bg person woman">{{item.womanNum}}</div>
                 </div>
             </div>
         </div>
