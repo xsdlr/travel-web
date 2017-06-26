@@ -32,6 +32,7 @@
     "less-loader": "^2.2.3",
     "url-loader": "^0.5.7",
     "style-loader": "^0.13.1",
-    "echarts":"^3.6.2"
+    "echarts":"^3.6.2",
+    "vue-baidu-map":"^0.10.8"
   }
 }
