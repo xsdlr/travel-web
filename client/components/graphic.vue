@@ -54,7 +54,11 @@
             this.dashboxStyle = this.initDashboxStyle();
 
             //请求数据
-            this.fetchQuery();
+            if(this.component.noNeedQuery){
+                this.queryResult = {};
+            }else{
+                this.fetchQuery();    
+            }
         },
         mounted(){
 

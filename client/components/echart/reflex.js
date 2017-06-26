@@ -1,7 +1,7 @@
 
 export default {
 
-	main(queryResult,component){
+	main(queryResult,component,options){
 
 		let option,data;
         
@@ -223,6 +223,194 @@ export default {
                                 }  
                             },
                             barGap:0
+				        }
+				    ]
+				};
+			break;
+			case 20:
+				option = {
+				    tooltip: {
+				        trigger: 'axis'
+				    },
+				    xAxis:  {
+				    	name:'时间',
+				        type: 'category',
+				        data: queryResult.time,
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+				    },
+				    grid: {
+				        left: '3%',
+				        right: '10%',
+				        bottom: '3%',
+				        top:'12%',
+				        containLabel: true
+				    },
+				    yAxis: {
+				        name:'人数',
+				        type: 'value',
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+			            splitLine:{  
+                            show:false  
+                        }
+				    },
+				    series: [
+				        {
+				            name:'苹果',
+				            type:'line',
+				            data:queryResult.ios
+				        },
+				        {
+				            name:'安卓',
+				            type:'line',
+				            data:queryResult.and,
+				            itemStyle : {  
+                                normal : {  
+                                    lineStyle:{  
+                                        color:'#5f9cb9'
+                                    }  
+                                }  
+                            },  
+				        }
+				    ]
+				};
+			break;
+			case 22:
+				option = {
+				    tooltip: {
+				        trigger: 'axis'
+				    },
+				    xAxis:  {
+				        type: 'category',
+				        data: queryResult.category,
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+				    },
+				    grid: {
+				        left: '3%',
+				        right: '10%',
+				        bottom: '3%',
+				        top:'12%',
+				        containLabel: true
+				    },
+				    yAxis: {
+				        name:'人数',
+				        type: 'value',
+				        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#5f9cb9'
+                            }
+                        },
+                        axisLine:{
+			                lineStyle:{
+			                    color:'#5f9cb9'
+			                }
+			            },
+			            splitLine:{  
+                            show:false
+                        }
+				    },
+				    series: [
+				        {
+				            name:'苹果',
+				            type:'bar',
+				            data:queryResult.ios,
+				            barGap:0
+				        },
+				        {
+				            name:'安卓',
+				            type:'bar',
+				            data:queryResult.and,
+				            itemStyle : {  
+                                normal : {  
+                                    lineStyle:{  
+                                        color:'#5f9cb9'
+                                    }  
+                                }  
+                            },
+                            barGap:0
+				        }
+				    ]
+				};
+			break;
+			case 23:
+				data = queryResult.list.map(item => {
+					return {
+						name:item.name + item.percent + '%',
+						value:item.percent
+					}
+				})
+				option = {
+				    series : [
+				        {
+				            type: 'pie',
+				            label: {
+				                normal: {
+				                    position: 'inner'
+				                }
+				            },
+				            data:data
+				        }
+				    ]
+				};
+			break;
+			case 26:
+				let value = queryResult[options.type];
+				option = {
+				    series: [
+				        {
+				            type: 'gauge',
+				            min:0,
+				            max:1,
+				            data: [{value: value}],
+				            axisLabel: {            // 刻度标签
+				                show:false
+				            },
+				            axisLine: {          // 坐标轴线
+				                lineStyle: {
+				                    width: 3
+				                }
+				            },
+				            splitLine: {           // 分隔线
+				                length :2,         // 属性length控制线长
+				            },
+				            pointer: {           // 指针
+				                width:2
+				            },
+				            detail : {
+				                textStyle:{
+				                    fontSize:16
+				                }
+				            },
 				        }
 				    ]
 				};

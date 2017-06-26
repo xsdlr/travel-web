@@ -1,5 +1,5 @@
 <template>
-    <div class="m-graphic-indicator">
+    <div class="m-graphic-indicator" :class="{'m-graphic-indicator-1':component.id == 19}">
         <div class="indicator-box" :style="boxStyle" v-for="(item,index) in queryResult.list">
             <h1 :style="getTextStyle(index)">{{item.num}}</h1>
             <div class="name">{{item.name}}</div>
@@ -18,18 +18,14 @@
                 textStyle:''
             }
         },
-        props: ['queryResult','compontent'],
+        props: ['queryResult','component'],
         created(){
             this.setStyle();
         },
         methods: {
             setStyle(){
                 let length = this.queryResult.list.length;
-                this.boxStyle = 'width:' + Math.floor(100 / length) + '%';
-
-                if(this.compontent.box.inner){
-                    this.boxStyle + 'padding:15px 0;'
-                }
+                this.boxStyle = 'width:' + Math.floor(100 / length) + '%;';
             },
             getTextStyle(index){
                 return 'color:' +  consts.INDICATOR_COLORS[index];

@@ -11,17 +11,20 @@
         data(){
             return {}
         },
-        props: ['queryResult','component'],
+        props: ['queryResult','component','options'],
         created(){
             
         },
         mounted(){
             let box = this.$parent.$refs.chart;
+            if(!box){
+                box = this.options.box;
+            }
 
             let myChart = echarts.init(box);
             
-            let options = reflex.main(this.queryResult,this.component);
-            myChart.setOption(options);
+            let myChartOptions = reflex.main(this.queryResult,this.component,this.options);
+            myChart.setOption(myChartOptions);
         },
         methods: {
             

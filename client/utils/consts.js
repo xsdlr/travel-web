@@ -116,8 +116,7 @@ export default {
 		{
 			box:{region:{top:20,left:20,width:1070,height:680}},
 			type:'category',
-			id:13,
-			needQuery:false
+			id:13
 		},
 		{
 			box:{
@@ -160,7 +159,7 @@ export default {
 			type:'empty',
 			id:18,
 			name:'钱包查询流量分析',
-			needQuery:false
+			noNeedQuery:true
 		},
 		{
 			box:{
@@ -188,7 +187,90 @@ export default {
 			type:'table',
 			id:21,
 			name:'留存用户'
+		}
+	],
+
+	LARGE4_CONFIG:[
+		{
+			box:{region:{top:20,left:20,width:1070,height:680}},
+			type:'category',
+			id:13
 		},
-		
+		{
+			box:{
+				region:{top:40,left:560,width:150,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:14,
+			name:'功能总使用量'
+		},
+		{
+			box:{
+				region:{top:40,left:730,width:340,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:15,
+			name:'排名前三使用功能'
+		},
+		{
+			box:{
+				region:{top:260,left:560,width:510,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:16,
+			name:'流量人数'
+		},
+		{
+			box:{
+				region:{top:480,left:560,width:510,height:190},
+				inner:true
+			},
+			type:'indicator',
+			id:17,
+			name:'三方应用'
+		},
+		{
+			box:{region:{top:20,left:1110,width:450,height:380}},
+			type:'line',
+			id:22,
+			name:'功能应用排名'
+		},
+		{
+			box:{region:{top:420,left:1110,width:450,height:280}},
+			type:'line',
+			id:23,
+			name:'用户流水钱包去向'
+		}
+	],
+
+	LARGE5_CONFIG:[
+		{
+			box:{region:{top:20,left:20,width:880,height:500}},
+			type:'map',
+			id:24,
+			name:'当前交通拥堵情况',
+			noNeedQuery:true
+		},
+		{
+			box:{region:{top:20,left:920,width:320,height:500}},
+			type:'heat',
+			id:25,
+			name:'未来4小时拥堵指数'
+		},
+		{
+			box:{region:{top:20,left:1260,width:320,height:500}},
+			type:'meter',
+			id:26,
+			name:'公共交通整体舒适度'
+		},
+		{
+			box:{region:{top:540,left:20,width:1560,height:160}},
+			type:'table',
+			id:27,
+			name:'交通出行意愿'
+		},
 	],
 }
