@@ -1,8 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import BaiduMap from 'vue-baidu-map'
 import App from './app.vue';
 
 Vue.use(VueRouter);
+Vue.use(BaiduMap, {
+  ak: 'Wog9RN3H6TVTPs1IVT6FfKNEEuixUXQL'
+})
 
 // 路由配置
 const router = new VueRouter({

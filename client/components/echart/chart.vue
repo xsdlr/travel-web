@@ -20,11 +20,16 @@
             if(!box){
                 box = this.options.box;
             }
-
             let myChart = echarts.init(box);
-            
+
             let myChartOptions = reflex.main(this.queryResult,this.component,this.options);
-            myChart.setOption(myChartOptions);
+            if(this.component.id == 25){
+                setTimeout(() => {
+                    myChart.setOption(myChartOptions);
+                },600)
+            }else{
+                myChart.setOption(myChartOptions);
+            }
         },
         methods: {
             
