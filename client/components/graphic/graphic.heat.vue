@@ -7,8 +7,8 @@
 </template>
 
 <script>
+    import BMap from 'echarts/extension/bmap/bmap';
     import chart from '../echart/chart';
-    require('echarts/extension/bmap/bmap');
 
     export default {
         name:'graphic-heat',

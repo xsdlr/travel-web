@@ -1,7 +1,7 @@
 <template>
     <div class="m-graphic-indicator" :class="{'m-graphic-indicator-1':component.id == 19}">
         <div class="indicator-box" :style="boxStyle" v-for="(item,index) in queryResult.list">
-            <h1 :style="getTextStyle(index)">{{item.num}}</h1>
+            <h1 class="f-ellipsis" :style="getTextStyle(index)">{{item.num}}</h1>
             <div class="name">{{item.name}}</div>
         </div>
     </div>

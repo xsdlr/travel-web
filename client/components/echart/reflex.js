@@ -128,6 +128,29 @@ export default {
 				    ]
 				};
 			break;
+			case 7:
+				option = {
+			        animationDuration: 1500,
+			        animationEasingUpdate: 'quinticInOut',
+			        series : [
+			            {
+			                name: 'relation-test',
+			                type: 'graph',
+			                layout: 'none',
+			                categories: queryResult.categories,
+			                data: queryResult.nodes,
+			                links: queryResult.links,
+			                roam: true,
+			                lineStyle: {
+			                    normal: {
+			                        color: 'source',
+			                        curveness: 0.3
+			                    }
+			                }
+			            }
+			        ]
+			    };
+			break;
 			case 12:
 				option = {
 				    tooltip: {

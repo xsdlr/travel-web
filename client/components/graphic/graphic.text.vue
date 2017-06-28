@@ -13,7 +13,7 @@
                 text:''
             }
         },
-        props: ['queryResult','compontent'],
+        props: ['queryResult','component'],
         created(){
             let queryResult = this.queryResult;
             this.text = queryResult.userName + '用户在' + queryResult.timeStr + '挂了内科在web端挂号，使用了健康出行'

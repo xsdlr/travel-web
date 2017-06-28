@@ -171,7 +171,7 @@
                   }]
             }
         },
-        props: ['queryResult','compontent'],
+        props: ['queryResult','component'],
         created(){
             
         },

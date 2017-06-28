@@ -14,7 +14,7 @@
         data(){
             return {}
         },
-        props: ['queryResult','compontent'],
+        props: ['queryResult','component'],
         created(){
             
         },
