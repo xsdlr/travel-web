@@ -38,6 +38,7 @@ export default {
 			},
 			type:'text',
 			id:1,
+			loop:true
 		},
 		{
 			box:{region:{top:20,left:720,width:620,height:310}},
@@ -61,7 +62,7 @@ export default {
 			box:{region:{top:350,left:1200,width:380,height:350}},
 			type:'pie',
 			id:6,
-			name:'年龄对比'
+			name:'年龄占比'
 		}
 	],
 
@@ -242,7 +243,7 @@ export default {
 			box:{region:{top:420,left:1110,width:450,height:280}},
 			type:'line',
 			id:23,
-			name:'用户流水钱包去向'
+			name:'用户流量去向占比'
 		}
 	],
 

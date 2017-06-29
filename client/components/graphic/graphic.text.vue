@@ -1,6 +1,7 @@
 <template>
     <div class="m-graphic-text">
-        {{text}}
+        {{queryResult.userName}}用户在{{queryResult.timeStr}}挂了内科<br>
+        <span class="wrd">在web端挂号，使用了健康出行</span>
     </div>
 </template>
 
@@ -15,8 +16,9 @@
         },
         props: ['queryResult','component'],
         created(){
-            let queryResult = this.queryResult;
-            this.text = queryResult.userName + '用户在' + queryResult.timeStr + '挂了内科在web端挂号，使用了健康出行'
+            // let queryResult = this.queryResult;
+            // this.text = queryResult.userName + '用户在' + queryResult.timeStr + '挂了内科<span class="wrd">在web端挂号，使用了健康出行</span>';
+            // window.client = queryResult.client;
         },
         mounted(){
 

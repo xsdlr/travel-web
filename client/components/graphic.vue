@@ -61,7 +61,12 @@
             if(this.component.noNeedQuery){
                 this.queryResult = {};
             }else{
-                this.fetchQuery();    
+                this.fetchQuery();
+                if(this.component.loop){
+                    setInterval(() => {
+                        this.fetchQuery();
+                    },2000)
+                }
             }
         },
         mounted(){

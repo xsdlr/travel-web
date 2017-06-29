@@ -12,6 +12,12 @@
                 </div>
             </div>
         </div>
+        <div class="points">
+            <div class="point point1 animation"></div>
+            <div class="point point2"></div>
+            <div class="point point3"></div>
+            <div class="point point4"></div>
+        </div>
     </div>
 </template>
 
