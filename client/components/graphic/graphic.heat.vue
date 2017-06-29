@@ -1,7 +1,16 @@
 <template>
-    <div class="m-frame m-graphic-heat">
-        <div class="m-echarts" ref="chart">
-            <chart :queryResult="queryResult" :component="component"></chart>
+    <div class="m-graphic-heat">
+        <div class="heat-box">
+            <div class="m-echarts" ref="chart">
+                <chart :queryResult="queryResult" :component="component"></chart>
+            </div>
+        </div>
+        <div class="list-box f-cb">
+            <div class="item" v-for="item in queryResult.list">
+                {{item.name}}：
+                <span class="percent">{{item.percent}}</span>
+                <span class="changePercent" :class="{'z-rise':item.rise}">{{item.changePercent}}</span>
+            </div>
         </div>
     </div>
 </template>
