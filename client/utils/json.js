@@ -244,7 +244,8 @@ export default {
         "and":[3000,2800]
     },
     21:{
-
+        "ios":[40,17,3],
+        "and":[30,27,13]
     },
     22:{
         "category":["钱包查询","卡交易查询"],
@@ -302,27 +303,10 @@ export default {
             "", "0时", "2时"
         ],
         "data":[
-            ["私家车",20,25],
-            ["公共交通",30,30],
-            ["地铁",0,0]
-        ],
-        // "name": [ "私家车","公共交通","地铁"],
-        // "time": ["0时", "2时"],
-        // "list": [
-        //     {
-        //         "percent": [20.25],
-        //         "changePercent": [5,-5]
-        //     },
-        //    {
-        //         "percent": [30.30],
-        //         "changePercent": [2,3]
-        //     },
-        //    {
-        //         "percent": [0.0],
-        //         "changePercent": [0,0]
-        //     },
-        // ]
-
+            [{value:"私家车"},{value:'20%',changePercent:'5%',rise:true},{value:'25%',changePercent:'5%',rise:false}],
+            [{value:"公共交通"},{value:'30%',changePercent:'2%',rise:true},{value:'30%',changePercent:'3%',rise:false}],
+            [{value:"地铁"},{value:'0%',changePercent:'-',rise:true},{value:'0%',changePercent:'-',rise:true}]
+        ]
     }
 
 }

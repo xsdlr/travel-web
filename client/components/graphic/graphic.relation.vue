@@ -1,6 +1,7 @@
 <template>
     <div class="m-graphic-relation">
         <div class="relation-box">
+            <div class="img"><img src="../../assets/img/relation.png"></div>
             <div class="m-echarts" ref="chart">
                 <chart :queryResult="queryResult" :component="component"></chart>
             </div>

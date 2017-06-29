@@ -184,7 +184,7 @@ export default {
 				region:{top:530,left:1125,width:425,height:150},
 				inner:true
 			},
-			type:'table',
+			type:'block',
 			id:21,
 			name:'留存用户'
 		}
@@ -268,7 +268,7 @@ export default {
 		},
 		{
 			box:{region:{top:540,left:20,width:1560,height:160}},
-			type:'table',
+			type:'table2',
 			id:27,
 			name:'交通出行意愿'
 		},

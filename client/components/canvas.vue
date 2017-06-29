@@ -31,7 +31,7 @@
         mounted(){
             this.resetRatio();
 
-            // this.setStyle();
+            this.setStyle();
         },
         methods: {
             resetRatio(){
