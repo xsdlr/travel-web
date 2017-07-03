@@ -165,19 +165,21 @@ export default {
             {
                 "id": 1,
                 "name": "钱包查询",
-                "pic": "http://",
-                "icon":'wallet'
+                "icon":'wallet',
+                "link":"large3",
+                "selected":true
             },
             {
                 "id": 2,
                 "name": "卡交易查询",
-                "pic": "http://",
                 "icon":'cardQuery',
+                "link":"large4",
                 "hot":true
             },
             {
                 "id": 3,
                 "name": "充值",
+                "link":"large3",
                 "icon":'recharge'
             }
         ]
