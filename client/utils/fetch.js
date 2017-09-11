@@ -33,8 +33,8 @@ function fetch(url, opt = {}) {
       } else {
         return response.json().then((json) => {
           switch (json.code) {
-            case 200:
-              return json.data;
+            case '1000':
+              return JSON.parse(json.resData);
             default:
               throw json.msg;
           }

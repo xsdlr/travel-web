@@ -62,11 +62,11 @@
                 this.queryResult = {};
             }else{
                 this.fetchQuery();
-                if(this.component.loop){
+//                if(this.component.loop){
                     setInterval(() => {
                         this.fetchQuery();
                     },2000)
-                }
+//                }
             }
         },
         mounted(){
