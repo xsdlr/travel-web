@@ -79,7 +79,7 @@ export default {
 			},
 			type:'list',
 			id:8,
-			name:'各年龄段使用最多功能'
+			name:'常用功能排名'
 		},
 		{
 			box:{
@@ -88,7 +88,7 @@ export default {
 			},
 			type:'indicator',
 			id:9,
-			name:'WEB端使用最多功能量'
+			name:'微信端使用最多功能量'
 		},
 		{
 			box:{
@@ -97,7 +97,7 @@ export default {
 			},
 			type:'indicator',
 			id:10,
-			name:'移动端使用最多功能量'
+			name:'市民卡APP使用最多功能量'
 		},
 		{
 			box:{region:{top:20,left:1110,width:450,height:370}},

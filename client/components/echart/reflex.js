@@ -163,13 +163,13 @@ export default {
 						        color:'#c23531'
 						    }
 				        },{
-				        	name:'WEB端',
+				        	name:'微信端',
 				        	textStyle:{
 						        color:'#5f9cb9'
 						    }
 				        },
 				        {
-				        	name:'移动端',
+				        	name:'市民卡APP',
 				        	textStyle:{
 						        color:'#4be6fc'
 						    }
@@ -222,7 +222,7 @@ export default {
 				            data:queryResult.count
 				        },
 				        {
-				            name:'WEB端',
+				            name:'微信端',
 				            type:'bar',
 				            data:queryResult.web,
 				            itemStyle : {  
@@ -235,7 +235,7 @@ export default {
                             barGap:0
 				        },
 				        {
-				            name:'移动端',
+				            name:'市民卡APP',
 				            type:'bar',
 				            data:queryResult.mobile,
 				            itemStyle : {  
