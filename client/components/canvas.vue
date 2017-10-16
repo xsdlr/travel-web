@@ -2,7 +2,7 @@
     <div class="m-canvas" :style="canvasStyle">
         <div class="box" :style="boxStyle">
             <div class="grid">
-                <graphic v-for="(component, index) of config" :component="component" :index="index"></graphic>
+                <graphic v-for="(component, index) of config" :key="index" :component="component" :index="index"></graphic>
             </div>
         </div>
     </div>
