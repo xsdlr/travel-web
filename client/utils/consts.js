@@ -115,13 +115,13 @@ export default {
 
 	LARGE3_CONFIG:[
 		{
-			box:{region:{top:20,left:20,width:1070,height:680}},
+			box:{region:{top:20,left:20,width:905,height:680}},
 			type:'category',
 			id:13
 		},
 		{
 			box:{
-				region:{top:40,left:560,width:150,height:190},
+				region:{top:40,left:395,width:150,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -130,7 +130,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:40,left:730,width:340,height:190},
+				region:{top:40,left:565,width:340,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -139,7 +139,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:260,left:560,width:510,height:190},
+				region:{top:260,left:395,width:510,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -148,7 +148,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:480,left:560,width:510,height:190},
+				region:{top:480,left:395,width:510,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -156,7 +156,7 @@ export default {
 			name:'三方应用'
 		},
 		{
-			box:{region:{top:20,left:1110,width:450,height:680}},
+			box:{region:{top:20,left:945,width:630,height:680}},
 			type:'empty',
 			id:18,
 			name:'钱包查询流量分析',
@@ -164,7 +164,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:60,left:1125,width:425,height:150},
+				region:{top:60,left:960,width:600,height:150},
 				inner:true
 			},
 			type:'indicator',
@@ -173,7 +173,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:220,left:1125,width:425,height:300},
+				region:{top:220,left:960,width:600,height:300},
 				inner:true
 			},
 			type:'line',
@@ -182,7 +182,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:530,left:1125,width:425,height:150},
+				region:{top:530,left:960,width:600,height:150},
 				inner:true
 			},
 			type:'block',
@@ -193,13 +193,13 @@ export default {
 
 	LARGE4_CONFIG:[
 		{
-			box:{region:{top:20,left:20,width:1070,height:680}},
+			box:{region:{top:20,left:20,width:905,height:680}},
 			type:'category',
 			id:13
 		},
 		{
 			box:{
-				region:{top:40,left:560,width:150,height:190},
+				region:{top:40,left:395,width:150,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -208,7 +208,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:40,left:730,width:340,height:190},
+				region:{top:40,left:565,width:340,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -217,7 +217,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:260,left:560,width:510,height:190},
+				region:{top:260,left:395,width:510,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -226,7 +226,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:480,left:560,width:510,height:190},
+				region:{top:480,left:395,width:510,height:190},
 				inner:true
 			},
 			type:'indicator',
@@ -234,13 +234,13 @@ export default {
 			name:'三方应用'
 		},
 		{
-			box:{region:{top:20,left:1110,width:450,height:380}},
+			box:{region:{top:20,left:945,width:630,height:380}},
 			type:'line',
 			id:22,
 			name:'功能应用排名'
 		},
 		{
-			box:{region:{top:420,left:1110,width:450,height:280}},
+			box:{region:{top:420,left:945,width:630,height:280}},
 			type:'line',
 			id:23,
 			name:'用户流量去向占比'
