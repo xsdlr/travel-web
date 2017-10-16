@@ -65,7 +65,7 @@
 //                if(this.component.loop){
                     setInterval(() => {
                         this.fetchQuery();
-                    },2000)
+                    },3000)
 //                }
             }
         },
