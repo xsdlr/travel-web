@@ -9,31 +9,41 @@
     export default {
         name:'chart',
         data(){
-            return {}
+            return {
+              myChart: undefined
+            }
         },
         props: ['queryResult','component','options'],
         created(){
             
         },
         mounted(){
-            let box = this.$parent.$refs.chart;
-            if(!box){
-                box = this.options.box;
-            }
-            let myChart = echarts.init(box);
-
-            let myChartOptions = reflex.main(this.queryResult,this.component,this.options);
-            if(this.component.id == 25){
-                setTimeout(() => {
-                    myChart.setOption(myChartOptions);
-                },600)
-            }else{
-                myChart.setOption(myChartOptions);
-            }
+            this.draw();
         },
         methods: {
-            
+            draw () {
+              let box = this.$parent.$refs.chart;
+              if(!box){
+                box = this.options.box;
+              }
+                if (!this.myChart) {
+                  this.myChart = echarts.init(box);
+                }
+              let myChartOptions = reflex.main(this.queryResult,this.component,this.options);
+              if(this.component.id == 25){
+                setTimeout(() => {
+                  this.myChart.setOption(myChartOptions);
+                },600)
+              }else{
+                this.myChart.setOption(myChartOptions);
+              }
+            }
+        },
+      watch: {
+        queryResult () {
+          this.draw();
         }
+      }
     }
 
 </script>
