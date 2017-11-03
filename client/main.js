@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import BaiduMap from 'vue-baidu-map'
 import App from './app.vue';
+import 'babel-polyfill'
 
 Vue.use(VueRouter);
 Vue.use(BaiduMap, {
