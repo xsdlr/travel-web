@@ -49,7 +49,8 @@
         data(){
             return {
                 dashboxStyle:'',
-                queryResult:null
+                queryResult:null,
+                interval: undefined
             }
         },
         props: ['component','index'],
@@ -63,7 +64,7 @@
             }else{
                 this.fetchQuery();
 //                if(this.component.loop){
-                    setInterval(() => {
+                    this.interval = setInterval(() => {
                         this.fetchQuery();
                     },3000)
 //                }
@@ -71,6 +72,12 @@
         },
         mounted(){
 
+        },
+        beforeDestroy () {
+          if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = undefined;
+          }
         },
         methods: {
             initDashboxStyle(){
