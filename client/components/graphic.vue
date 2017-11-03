@@ -92,7 +92,8 @@
 
             fetchQuery(){
                 service.getQuery({
-                    id:this.component.id
+                    id: this.component.id,
+                    data: this.component.data
                 }).then(queryResult => {
                     this.queryResult = queryResult;
                 })

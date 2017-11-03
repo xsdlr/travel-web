@@ -16,6 +16,10 @@
             return {
                 configs: [
                     consts.LARGE3_CONFIG,
+                    consts.LARGE3_1_CONFIG,
+                    consts.LARGE3_2_CONFIG,
+                    consts.LARGE3_3_CONFIG,
+                    consts.LARGE3_4_CONFIG,
                     consts.LARGE4_CONFIG
                 ],
                 index: 0,
@@ -30,7 +34,7 @@
             return this.$route.query
           },
           needSwitch () {
-            return this.query.switch === '1'
+            return this.query.switch !== '0'
           },
           switchTimeout () {
             return Number(this.query.time) || 20000
@@ -40,6 +44,7 @@
 
         },
         mounted(){
+          this.index = Number(this.query.index) || 0;
           this.needSwitch && this.switchViews()
         },
         beforeDestroy () {

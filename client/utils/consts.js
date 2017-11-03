@@ -1,3 +1,46 @@
+const LARGE3_COMMON_CONFIG = [
+  {
+    box:{region:{top:20,left:20,width:905,height:680}},
+    type:'category',
+    id:13
+  },
+  {
+    box:{
+      region:{top:40,left:395,width:150,height:190},
+      inner:true
+    },
+    type:'indicator',
+    id:14,
+    name:'功能总使用量'
+  },
+  {
+    box:{
+      region:{top:40,left:565,width:340,height:190},
+      inner:true
+    },
+    type:'indicator',
+    id:15,
+    name:'排名前三使用功能'
+  },
+  {
+    box:{
+      region:{top:260,left:395,width:510,height:190},
+      inner:true
+    },
+    type:'indicator',
+    id:16,
+    name:'流量人数'
+  },
+  {
+    box:{
+      region:{top:480,left:395,width:510,height:190},
+      inner:true
+    },
+    type:'indicator',
+    id:17,
+    name:'三方应用'
+  }
+];
 export default {
 	choiceArr:[{
 	    name:'地铁流量',
@@ -113,84 +156,223 @@ export default {
 		}
 	],
 
-	LARGE3_CONFIG:[
-		{
-			box:{region:{top:20,left:20,width:905,height:680}},
-			type:'category',
-			id:13
-		},
-		{
-			box:{
-				region:{top:40,left:395,width:150,height:190},
-				inner:true
-			},
-			type:'indicator',
-			id:14,
-			name:'功能总使用量'
-		},
-		{
-			box:{
-				region:{top:40,left:565,width:340,height:190},
-				inner:true
-			},
-			type:'indicator',
-			id:15,
-			name:'排名前三使用功能'
-		},
-		{
-			box:{
-				region:{top:260,left:395,width:510,height:190},
-				inner:true
-			},
-			type:'indicator',
-			id:16,
-			name:'流量人数'
-		},
-		{
-			box:{
-				region:{top:480,left:395,width:510,height:190},
-				inner:true
-			},
-			type:'indicator',
-			id:17,
-			name:'三方应用'
-		},
-		{
-			box:{region:{top:20,left:945,width:630,height:680}},
-			type:'empty',
-			id:18,
-			name:'钱包查询流量分析',
-			noNeedQuery:true
-		},
-		{
-			box:{
-				region:{top:60,left:960,width:600,height:150},
-				inner:true
-			},
-			type:'indicator',
-			id:19,
-			name:'用户统计'
-		},
-		{
-			box:{
-				region:{top:220,left:960,width:600,height:300},
-				inner:true
-			},
-			type:'line',
-			id:20,
-			name:'使用统计'
-		},
-		{
-			box:{
-				region:{top:530,left:960,width:600,height:150},
-				inner:true
-			},
-			type:'block',
-			id:21,
-			name:'留存用户'
-		}
-	],
+	LARGE3_CONFIG:LARGE3_COMMON_CONFIG.concat([
+    {
+      box:{region:{top:20,left:945,width:630,height:680}},
+      type:'empty',
+      id:18,
+      name:'总流量分析',
+      noNeedQuery:true
+    },
+    {
+      box:{
+        region:{top:60,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'indicator',
+      id:19,
+      name:'用户统计'
+    },
+    {
+      box:{
+        region:{top:220,left:960,width:600,height:300},
+        inner:true
+      },
+      type:'line',
+      id:20,
+      name:'使用统计'
+    },
+    {
+      box:{
+        region:{top:530,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'block',
+      id:21,
+      name:'留存用户'
+    }
+  ]),
 
+  LARGE3_1_CONFIG:LARGE3_COMMON_CONFIG.concat([
+    {
+      box:{region:{top:20,left:945,width:630,height:680}},
+      type:'empty',
+      id:18,
+      name:'惠民金服',
+      noNeedQuery:true
+    },
+    {
+      box:{
+        region:{top:60,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'indicator',
+      id:28,
+      name:'用户统计',
+      data: {
+        func: 'hmjf'
+      }
+    },
+    {
+      box:{
+        region:{top:220,left:960,width:600,height:300},
+        inner:true
+      },
+      type:'line',
+      id:29,
+      name:'使用统计',
+      data: {
+        func: 'hmjf'
+      }
+    },
+    {
+      box:{
+        region:{top:530,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'block',
+      id:30,
+      name:'留存用户',
+      data: {
+        func: 'hmjf'
+      }
+    }
+  ]),
+  LARGE3_2_CONFIG:LARGE3_COMMON_CONFIG.concat([
+    {
+      box:{region:{top:20,left:945,width:630,height:680}},
+      type:'empty',
+      id:18,
+      name:'惠购生活',
+      noNeedQuery:true
+    },
+    {
+      box:{
+        region:{top:60,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'indicator',
+      id:28,
+      name:'用户统计',
+      data: {
+        func: 'hgsh'
+      }
+    },
+    {
+      box:{
+        region:{top:220,left:960,width:600,height:300},
+        inner:true
+      },
+      type:'line',
+      id:29,
+      name:'使用统计',
+      data: {
+        func: 'hgsh'
+      }
+    },
+    {
+      box:{
+        region:{top:530,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'block',
+      id:30,
+      name:'留存用户',
+      data: {
+        func: 'hgsh'
+      }
+    }
+  ]),
+  LARGE3_3_CONFIG:LARGE3_COMMON_CONFIG.concat([
+    {
+      box:{region:{top:20,left:945,width:630,height:680}},
+      type:'empty',
+      id:18,
+      name:'生活缴费',
+      noNeedQuery:true
+    },
+    {
+      box:{
+        region:{top:60,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'indicator',
+      id:28,
+      name:'用户统计',
+      data: {
+        func: 'shjf'
+      }
+    },
+    {
+      box:{
+        region:{top:220,left:960,width:600,height:300},
+        inner:true
+      },
+      type:'line',
+      id:29,
+      name:'使用统计',
+      data: {
+        func: 'shjf'
+      }
+    },
+    {
+      box:{
+        region:{top:530,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'block',
+      id:30,
+      name:'留存用户',
+      data: {
+        func: 'shjf'
+      }
+    }
+  ]),
+  LARGE3_4_CONFIG:LARGE3_COMMON_CONFIG.concat([
+    {
+      box:{region:{top:20,left:945,width:630,height:680}},
+      type:'empty',
+      id:18,
+      name:'绿色生活月刊',
+      noNeedQuery:true
+    },
+    {
+      box:{
+        region:{top:60,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'indicator',
+      id:28,
+      name:'用户统计',
+      data: {
+        func: 'lsshyk'
+      }
+    },
+    {
+      box:{
+        region:{top:220,left:960,width:600,height:300},
+        inner:true
+      },
+      type:'line',
+      id:29,
+      name:'使用统计',
+      data: {
+        func: 'lsshyk'
+      }
+    },
+    {
+      box:{
+        region:{top:530,left:960,width:600,height:150},
+        inner:true
+      },
+      type:'block',
+      id:30,
+      name:'留存用户',
+      data: {
+        func: 'lsshyk'
+      }
+    }
+  ]),
 	LARGE4_CONFIG:[
 		{
 			box:{region:{top:20,left:20,width:905,height:680}},
@@ -246,7 +428,6 @@ export default {
 			name:'用户流量去向占比'
 		}
 	],
-
 	LARGE5_CONFIG:[
 		{
 			box:{region:{top:20,left:20,width:880,height:500}},

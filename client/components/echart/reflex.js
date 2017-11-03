@@ -608,7 +608,7 @@ export default {
 				    }
 				};
 			break;
-			case 26:
+      case 26:
 				let value = queryResult[options.type];
 				option = {
 				    series: [
@@ -639,7 +639,74 @@ export default {
 				        }
 				    ]
 				};
-			break;
+			  break;
+      case 29:
+        option = {
+          tooltip: {
+            trigger: 'axis'
+          },
+          xAxis:  {
+            name:'时间',
+            type: 'category',
+            data: queryResult.time,
+            axisLabel: {
+              show: true,
+              textStyle: {
+                color: '#5f9cb9'
+              }
+            },
+            axisLine:{
+              lineStyle:{
+                color:'#5f9cb9'
+              }
+            },
+          },
+          grid: {
+            left: '3%',
+            right: '10%',
+            bottom: '3%',
+            top:'12%',
+            containLabel: true
+          },
+          yAxis: {
+            name:'人数',
+            type: 'value',
+            axisLabel: {
+              show: true,
+              textStyle: {
+                color: '#5f9cb9'
+              }
+            },
+            axisLine:{
+              lineStyle:{
+                color:'#5f9cb9'
+              }
+            },
+            splitLine:{
+              show:false
+            }
+          },
+          series: [
+            {
+              name:'苹果',
+              type:'line',
+              data:queryResult.ios
+            },
+            {
+              name:'安卓',
+              type:'line',
+              data:queryResult.and,
+              itemStyle : {
+                normal : {
+                  lineStyle:{
+                    color:'#5f9cb9'
+                  }
+                }
+              },
+            }
+          ]
+        };
+        break;
 		}
 
         return option;
