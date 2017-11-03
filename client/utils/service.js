@@ -2,7 +2,8 @@ import fetch from './fetch';
 import mockJson from './json';
 
 // const hostIp = 'http://116.62.148.154:8080/odhbase';
-const hostIp = 'http://192.168.1.115/screenInterface/';
+// http://192.168.1.115
+const hostIp = window.baseURL || 'http://localhost/screenInterface/';
 const mock = false;
 
 export default {
@@ -38,17 +39,20 @@ export default {
       22: 'FunctionRank.php',
       23: 'WalletCount.php',
       26: 'PublicTransportComfort.php',
-      27: 'Transportation.php'
+      27: 'Transportation.php',
+      28: 'UserCountByFunctions.php',
+      29: 'UsageCountByFunctions.php',
+      30: 'RetentionByFunctions.php'
     };
 
 		return new Promise((resolve, reject) => {
-      const {id} = data || {};
+      const {id, data: queryData} = data || {};
       const url = urlMap[id];
-      url ? resolve(url) : reject(`id为${id}的服务请求地址未映射`);
-    }).then(url => {
+      url ? resolve({url, data: queryData}) : reject(`id为${id}的服务请求地址未映射`);
+    }).then(({url, data = {}}) => {
       return fetch(hostIp + url,{
         method:'POST',
-        data:{}
+        data
       });
     });
 	}
