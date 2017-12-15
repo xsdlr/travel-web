@@ -76,7 +76,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:40,left:430,width:250,height:50},
+				region:{top:40,left:250,width:430,height:75},
 				inner:true
 			},
 			type:'text',

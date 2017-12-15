@@ -6,6 +6,53 @@ export default {
 		let option,data;
         
 		switch(component.id){
+      case 11:
+        option = {
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: 'shadow'
+            }
+          },
+          legend: {
+            textStyle: {
+              color: '#fff'
+            },
+            data: ['移动终端']
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+          },
+          xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01],
+            axisLine: {
+              lineStyle: {
+                color: '#fff'
+              }
+            }
+          },
+          yAxis: {
+            type: 'category',
+            axisLine: {
+              lineStyle: {
+                color: '#fff'
+              }
+            },
+            data: queryResult.terminal.types
+          },
+          series: [
+            {
+              name: '移动终端',
+              type: 'bar',
+              data: queryResult.terminal.values
+            }
+          ]
+        };
+        break;
 			case 3:
 				option = {
 				    tooltip: {
@@ -26,8 +73,9 @@ export default {
 				        x: 'right'
 				    },
 				    xAxis:  {
-				    	name:'时间',
+				    	  name:'时间',
 				        type: 'category',
+                boundaryGap: false,
 				        data: queryResult.time,
 				        axisLabel: {
                             show: true,
@@ -97,9 +145,10 @@ export default {
 				    series : [
 				        {
 				            type: 'pie',
+                    radius: '50%',
 				            label: {
 				                normal: {
-				                    position: 'inner'
+				                    position: 'outside'
 				                }
 				            },
 				            data:data
@@ -118,9 +167,10 @@ export default {
 				    series : [
 				        {
 				            type: 'pie',
+                    radius: '60%',
 				            label: {
 				                normal: {
-				                    position: 'inner'
+				                    position: 'outside'
 				                }
 				            },
 				            data:data
@@ -178,6 +228,7 @@ export default {
 				    },
 				    xAxis:  {
 				        type: 'category',
+                boundaryGap: false,
 				        data: queryResult.time,
 				        axisLabel: {
                             show: true,
@@ -257,6 +308,7 @@ export default {
 				    },
 				    xAxis:  {
 				    	name:'时间',
+                boundaryGap: false,
 				        type: 'category',
 				        data: queryResult.time,
 				        axisLabel: {
@@ -396,9 +448,10 @@ export default {
 				    series : [
 				        {
 				            type: 'pie',
+                    // radius: '30%',
 				            label: {
 				                normal: {
-				                    position: 'inner'
+				                    position: 'outside'
 				                }
 				            },
 				            data:data
