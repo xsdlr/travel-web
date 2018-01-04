@@ -1,7 +1,9 @@
 <template>
     <div class="m-graphic-text">
-        {{resRegistration.userName}}用户在{{resRegistration.timeStr}}挂了{{resRegistration.hospital}}的{{resRegistration.department}}<br>
-        <span class="wrd">{{resJKCX.userName}}用户在{{resJKCX.timeStr}}使用了健康出行</span>
+        <template v-if="resRegistrationIsDefined">
+            {{resRegistration.userName}}用户在{{resRegistration.timeStr}}挂了{{resRegistration.hospital}}的{{resRegistration.department}}<br>
+        </template>
+        <span v-if="resJKCXIsDefined" class="wrd">{{resJKCX.userName}}用户在{{resJKCX.timeStr}}使用了健康出行</span>
     </div>
 </template>
 
@@ -17,11 +19,19 @@
             }
         },
         computed: {
+          resJKCXIsDefined () {
+            const {userName, timeStr} = this.queryResult.resJKCX;
+            return userName && timeStr
+          },
+          resRegistrationIsDefined () {
+            const {department, hospital, timeStr, userName} = this.queryResult.resRegistration;
+            return department && hospital && timeStr && userName
+          },
           resJKCX () {
             const {userName, timeStr} = this.queryResult.resJKCX;
             return {
-              userName: `${take(userName, 6).join('')}****${takeRight(userName, 4).join('')}`,
-              timeStr: utils.format(timeStr, 'yyyy年MM月dd日HH:mm:ss')
+              userName: userName && `${take(userName, 6).join('')}****${takeRight(userName, 4).join('')}`,
+              timeStr: timeStr && utils.format(timeStr, 'yyyy年MM月dd日HH:mm:ss')
             }
           },
           resRegistration () {
@@ -29,8 +39,8 @@
             return {
               department,
               hospital,
-              userName: `${take(userName, 6).join('')}****${takeRight(userName, 4).join('')}`,
-              timeStr: utils.format(timeStr, 'yyyy年MM月dd日HH:mm:ss')
+              userName: userName && `${take(userName, 6).join('')}****${takeRight(userName, 4).join('')}`,
+              timeStr: timeStr && utils.format(timeStr, 'yyyy年MM月dd日HH:mm:ss')
             }
           }
         },

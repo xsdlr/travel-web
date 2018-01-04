@@ -14,6 +14,7 @@
         computed: {
           tableData () {
             const {terminal} = this.queryResult.data;
+            console.log('HospitalRank', this.queryResult.data)
             const dataMap = (data) => {
               return data.map(object => {
                 const key = keys(object)[0];

@@ -14,12 +14,12 @@ export default {
               type: 'shadow'
             }
           },
-          legend: {
-            textStyle: {
-              color: '#fff'
-            },
-            data: ['移动终端']
-          },
+          // legend: {
+          //   textStyle: {
+          //     color: '#fff'
+          //   },
+          //   data: ['移动终端']
+          // },
           grid: {
             left: '3%',
             right: '4%',
@@ -148,7 +148,7 @@ export default {
                     radius: '50%',
 				            label: {
 				                normal: {
-				                    position: 'outside'
+				                    position: 'inside'
 				                }
 				            },
 				            data:data
@@ -180,25 +180,59 @@ export default {
 			break;
 			case 7:
 				option = {
-			        animationDuration: 1500,
-			        animationEasingUpdate: 'quinticInOut',
-			        series : [
-			            {
-			                name: 'relation-test',
-			                type: 'graph',
-			                layout: 'none',
-			                categories: queryResult.categories,
-			                data: queryResult.nodes,
-			                links: queryResult.links,
-			                roam: true,
-			                lineStyle: {
-			                    normal: {
-			                        color: 'source',
-			                        curveness: 0.3
-			                    }
-			                }
-			            }
-			        ]
+			        // animationDuration: 1500,
+			        // animationEasingUpdate: 'quinticInOut',
+			        // series : [
+			        //     {
+			        //         name: 'relation-test',
+			        //         type: 'graph',
+			        //         layout: 'none',
+			        //         categories: queryResult.categories,
+			        //         data: queryResult.nodes,
+			        //         links: queryResult.links,
+			        //         roam: true,
+			        //         lineStyle: {
+			        //             normal: {
+			        //                 color: 'source',
+			        //                 curveness: 0.3
+			        //             }
+			        //         }
+			        //     }
+			        // ]
+            series: [{
+              type: 'wordCloud',
+              shape: 'circle',
+              // maskImage: maskImage,
+              left: 'left',
+              top: 'center',
+              width: '100%',
+              height: '100%',
+              right: null,
+              bottom: null,
+              sizeRange: [12, 60],
+              rotationRange: [-90, 90],
+              rotationStep: 45,
+              gridSize: 8,
+              drawOutOfBound: false,
+              textStyle: {
+                normal: {
+                  fontFamily: 'sans-serif',
+                  fontWeight: 'bold',
+                  color: function () {
+                    return 'rgb(' + [
+                      Math.round(Math.random() * 160),
+                      Math.round(Math.random() * 160),
+                      Math.round(Math.random() * 160)
+                    ].join(',') + ')';
+                  }
+                },
+                emphasis: {
+                  shadowBlur: 10,
+                  shadowColor: '#333'
+                }
+              },
+              data: queryResult.list
+            }]
 			    };
 			break;
 			case 12:
@@ -323,6 +357,20 @@ export default {
 			                }
 			            },
 				    },
+            legend: {
+              left: 'right',
+              data: [{
+                name: '苹果',
+                textStyle: {
+                  color: 'red'
+                }
+              }, {
+                name: '安卓',
+                textStyle: {
+                  color:'#5f9cb9'
+                }
+              }]
+            },
 				    grid: {
 				        left: '3%',
 				        right: '10%',
@@ -374,7 +422,21 @@ export default {
 				    tooltip: {
 				        trigger: 'axis'
 				    },
-				    xAxis:  {
+          legend: {
+            left: 'right',
+            data: [{
+              name: '苹果',
+              textStyle: {
+                color: 'red'
+              }
+            }, {
+              name: '安卓',
+              textStyle: {
+                color:'#5f9cb9'
+              }
+            }]
+          },
+          xAxis:  {
 				        type: 'category',
 				        data: queryResult.category,
 				        axisLabel: {
@@ -697,6 +759,20 @@ export default {
         option = {
           tooltip: {
             trigger: 'axis'
+          },
+          legend: {
+            left: 'right',
+            data: [{
+              name: '苹果',
+              textStyle: {
+                color: 'red'
+              }
+            }, {
+              name: '安卓',
+              textStyle: {
+                color:'#5f9cb9'
+              }
+            }]
           },
           xAxis:  {
             name:'时间',

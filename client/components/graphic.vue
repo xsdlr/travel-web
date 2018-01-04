@@ -12,6 +12,7 @@
             <graphic-text v-if="queryResult && component.type === 'text'" :queryResult="queryResult" :component="component"/>
             <graphic-table v-if="queryResult && component.type === 'table'" :queryResult="queryResult" :component="component"/>
             <graphic-table2 v-if="queryResult && component.type === 'table2'" :queryResult="queryResult" :component="component"/>
+            <graphic-table-hospital-rank v-if="queryResult && component.type === 'tableHospitalRank'" :queryResult="queryResult" :component="component"/>
             <graphic-line v-if="queryResult && component.type === 'line'" :queryResult="queryResult" :component="component"/>
             <graphic-pie v-if="queryResult && component.type === 'pie'" :queryResult="queryResult" :component="component"/>
             <graphic-map v-if="queryResult && component.type === 'map'" :queryResult="queryResult" :component="component"/>
@@ -34,6 +35,7 @@
     import graphicText from './graphic/graphic.text';
     import graphicTable from './graphic/graphic.table';
     import graphicTable2 from './graphic/graphic.table2';
+    import graphicTableHospitalRank from './graphic/graphic.table.hospitalRank';
     import graphicLine from './graphic/graphic.line';
     import graphicPie from './graphic/graphic.pie';
     import graphicMap from './graphic/graphic.map';
@@ -63,11 +65,11 @@
                 this.queryResult = {};
             }else{
                 this.fetchQuery();
-//                if(this.component.loop){
+               if(!this.component.unLoop){
                     this.interval = setInterval(() => {
                         this.fetchQuery();
                     },3000)
-//                }
+               }
             }
         },
         mounted(){
@@ -99,7 +101,7 @@
                 })
             }
         },
-        components:{graphicArea,graphicText,graphicTable,graphicTable2,graphicLine,graphicPie,graphicMap,graphicIndicator,graphicList,graphicMeter,graphicHeat,graphicRelation,graphicCategory,graphicBlock}
+        components:{graphicArea,graphicText,graphicTable,graphicTable2,graphicTableHospitalRank,graphicLine,graphicPie,graphicMap,graphicIndicator,graphicList,graphicMeter,graphicHeat,graphicRelation,graphicCategory,graphicBlock}
     }
 
 </script>

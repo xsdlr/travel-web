@@ -4,6 +4,7 @@
 
 <script>
     import echarts from 'echarts';
+    import 'echarts-wordcloud';
     import reflex from './reflex';
 
     export default {

@@ -1,8 +1,9 @@
 const LARGE3_COMMON_CONFIG = [
   {
     box:{region:{top:20,left:20,width:905,height:680}},
-    type:'category',
-    id:13
+    type:'relation',
+    id:7,
+    unLoop: true
   },
   {
     box:{
@@ -76,7 +77,7 @@ export default {
 		},
 		{
 			box:{
-				region:{top:40,left:250,width:430,height:75},
+				region:{top:40,left:200,width:480,height:75},
 				inner:true
 			},
 			type:'text',
@@ -97,7 +98,7 @@ export default {
 		},
 		{
 			box:{region:{top:350,left:720,width:460,height:350}},
-			type:'table',
+			type:'tableHospitalRank',
 			id:5,
 			name:'出行就诊医院排名'
 		},
@@ -113,7 +114,9 @@ export default {
 		{
 			box:{region:{top:20,left:20,width:1070,height:680}},
 			type:'relation',
-			id:7
+			id:7,
+      needBackground: true,
+      unLoop: true
 		},
 		{
 			box:{
@@ -146,7 +149,7 @@ export default {
 			box:{region:{top:20,left:1110,width:450,height:370}},
 			type:'table',
 			id:11,
-			name:'终端使用统计'
+			name:'终端使用占比'
 		},
 		{
 			box:{region:{top:410,left:1110,width:450,height:290}},

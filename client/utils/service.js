@@ -22,7 +22,7 @@ export default {
       4: 'TripMode.php',
       5: 'HospitalRank.php',
       6: 'AgeContrast.php',
-      7: 'LeftGraph.php',
+      7: 'TagCloud.php',
       8: 'functionByAge.php',
       9: 'FunctionByWeb.php',
       10: 'FUnctionByMobile.php',
